@@ -17,8 +17,8 @@ multiple .env file variables can be stacked as a list and must be delimeted by a
 - deliniated by a comma. In this example 2023, Mike Jones, 45, 453B & Columbus will all be in File no.1 and Gabbie Edwards etc in File no.2 and so on
 - the variables in the .env file must also match the variables specified for change in the Base File Template
 
-__DATE__=2023,2024
-__SENATOR_NAME__=Mike Jones,Gabbie Edwards
-__DISTRICT_NO__=45,23
-__ROOM_NO__=453B,323A
-__CITY__=Columbus,Houston
+- __DATE__=2023,2024
+- __SENATOR_NAME__=Mike Jones,Gabbie Edwards
+- __DISTRICT_NO__=45,23
+- __ROOM_NO__=453B,323A
+- __CITY__=Columbus,Houston
