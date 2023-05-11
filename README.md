@@ -1,11 +1,11 @@
-#: PyLetterUpdater
+## LetterUpdater
 ![image](https://github.com/Dudi1896/PyLetterUpdater/assets/17666999/6b7e4c98-94e6-4aa9-9841-8e94e0fa3d08)
 
 Simple program to modify a Base File word document and generate a multitude of unique new files (pdf and or docx) depending on what values are added to the base file
 The code will generate as many new unique files as you want depending on how many variables you add to .env file
 multiple .env file variables can be stacked as a list and must be delimeted by a comma
 
-###:  How to Use
+### :writing_hand: How to Use :
 - Gather your generic word document that wil server as your base File Template
 - create a .env file in the root directory of the program and file in your variables. look at example.env to understand the structure
 - SOURCE_DIRECTORY={Directory of your Base File Template}
