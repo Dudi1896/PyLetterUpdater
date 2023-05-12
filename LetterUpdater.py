@@ -22,13 +22,15 @@ def main():
     target_files = os.getenv("TARGET_FILE").split(",")
     date = os.getenv("__DATE__")
     senator_names = os.getenv("__SENATOR_NAME__").split(",")
+    senator_last_names = os.getenv("__SEN_LNAME__").split(",")
     district_nos = os.getenv("__DISTRICT_NO__").split(",")
     room_nos = os.getenv("__ROOM_NO__").split(",")
     city_variables = os.getenv("__CITY__").split(",")
 
     # Loop through each target file
-    for new_file, senator_name, district_no, room_no, city_variable in zip(target_files, senator_names, district_nos,
-                                                                           room_nos, city_variables):
+    for new_file, senator_name, senator_last_name, district_no, room_no, \
+        city_variable in zip(target_files,
+                             senator_names, senator_last_names, district_nos, room_nos, city_variables):
         # Copy source file to target directory
         shutil.copyfile(source_file, os.path.join(target_directory, new_file))
 
@@ -45,6 +47,11 @@ def main():
             if "__SENATOR_NAME__" in paragraph.text:
                 paragraph.text = paragraph.text.replace("__SENATOR_NAME__", senator_name)
                 print(f"Senator Name: {senator_name} changed successfully")
+
+        for paragraph in document.paragraphs:
+            if "__SEN_LNAME__" in paragraph.text:
+                paragraph.text = paragraph.text.replace("__SEN_LNAME__", senator_last_name)
+                print(f"Senator Lastname: {senator_last_name} changed successfully")
 
         for paragraph in document.paragraphs:
             if "__DISTRICT_NO__" in paragraph.text:
